@@ -12,7 +12,7 @@
     </a>
 </p>
 
-- I'm currently working as Software Engineer at [GoCache](https://www.gocache.com.br/) a CDN & Security plataform
+- I'm currently working as Software Engineer at [GoCache](https://www.gocache.com.br/) a CDN & Security platform
 - Undergraduate in Science & Technology and Computer Science at [UFABC](https://www.ufabc.edu.br/)
 - Working in a [Scientific Research](https://github.com/Mewbi/ic) in applied mathematics about Optimization of Molecular Geometry
 - I like CLI programs
@@ -46,6 +46,6 @@
 
 ## Next Steps
 
-- Get better using [Golang](https://go.dev/)
+- Enhance my skills at [Golang](https://go.dev/)
 - Learn [Rust](https://www.rust-lang.org/)
 - Create a project using [Clickhouse](https://clickhouse.com/)
