@@ -25,6 +25,35 @@ lvim.keys.visual_mode["<S-down>"] = false
 -- Linters
 lvim.format_on_save.enabled = true
 lvim.format_on_save.pattern = { "*.lua", "*.py" }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { name = "black" },
+  {
+    name = "prettier",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespace
+    -- options such as --line-width 80 become either {"--line-width", "80"} or {"--line-width=80"}
+    args = { "--linet-width", "100" },
+    ---@usage only start in these filetypes, by default it will attach to all filetypes it supports
+    filetypes = { "javascript", "vue", "typescript", "typescriptreact", "html", "php" },
+  },
+}
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  {
+    command = "eslint",
+    filetypes = {
+      "javascriptreact",
+      "javascript",
+      "typescriptreact",
+      "typescript",
+      "vue",
+      "html",
+      "php"
+    },
+  },
+}
 
 -- Fold Options
 vim.opt.foldmethod = "expr"
@@ -32,7 +61,8 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false -- if this option is true and fold method option is other than normal, every time a document is opened everything will be folded.
 
 -- Colorscheme and Visual
-lvim.colorscheme = "tokyonight-night"
+-- lvim.colorscheme = "tokyonight-night" -- Dark mode
+lvim.colorscheme = "catppuccin-latte" -- Ligth mode
 lvim.builtin.indentlines.options = {
   indent = {
     char = "│",
@@ -63,6 +93,11 @@ lvim.plugins = {
     priority = 1000,
     opts = {
     },
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
   },
   {
     "echasnovski/mini.indentscope",
@@ -101,7 +136,16 @@ lvim.plugins = {
     config = function()
       require("go").setup()
     end,
-  }
+  },
+  {
+    "echasnovski/mini.indentscope",
+    config = function()
+      require('mini.indentscope').setup({
+        symbol = "│",
+        options = { try_as_border = true },
+      })
+    end
+  },
 }
 
 lvim.autocommands = {
