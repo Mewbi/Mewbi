@@ -12,9 +12,9 @@
     </a>
 </p>
 
-- I'm currently working as Software Engineer at [GoCache](https://www.gocache.com.br/) a CDN & Security platform
+- I'm currently working as Software Engineer
 - Undergraduate in Science & Technology and Computer Science at [UFABC](https://www.ufabc.edu.br/)
-- Working in a [Scientific Research](https://github.com/Mewbi/ic) in applied mathematics about Optimization of Molecular Geometry
+- Finished a [Scientific Research](https://github.com/Mewbi/ic) in applied mathematics about Optimization of Molecular Geometry
 - I like CLI programs
 
 ## Technologies
