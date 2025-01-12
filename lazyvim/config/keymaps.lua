@@ -21,7 +21,9 @@ map("n", "<S-v>", ":vsplit<CR>", { desc = "Split vertical" })
 map("n", "<S-h>", ":split<CR>", { desc = "Split horizontal" })
 map("n", "<leader>w", "<Esc><CMD>w<CR>", { desc = "Save", remap = true })
 map("n", "<leader>q", "<Esc><CMD>q<CR>", { desc = "Close", remap = true })
-map("n", "<leader>c", LazyVim.ui.bufremove, { desc = "Delete Buffer" })
+map("n", "<leader>c", function()
+	Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
 map("n", "<C-A-down>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 map("n", "<C-A-up>", "<cmd>resize -2<cr>", { desc = "Decrease Window Height" })
 map("n", "<C-A-right>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
@@ -33,7 +35,7 @@ map("n", "<C-right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
 -- Open terminal
 map("n", "<C-\\>", function()
-  LazyVim.terminal()
+	LazyVim.terminal()
 end, { desc = "Terminal (cwd)" })
 
 -- TODO: Add comment selected lines
