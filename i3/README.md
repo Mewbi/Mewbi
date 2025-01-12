@@ -1,6 +1,6 @@
 # I3
 
-I3 is a Linux window manager table enables you to use your desktop based on keyboards shortcuts
+I3 is a Linux window manager that enables you to use your desktop based on keyboards shortcuts
 
 You can use different programs to create your own configuration.
 
@@ -12,7 +12,7 @@ Here is a preview of my configuration:
 
 ## Dependencies
 
-This configuration was made over a Debian 12. Since this distro has old package version in the official repository, you might be interested on compile some dependencies.
+This configuration was made over a Debian 12. Since this distro has old packages version in the official repository, you might be interested on compile some dependencies.
 
 - [i3](https://i3wm.org/) - Window tile manager
 - [picom](https://github.com/yshui/picom) - Required compile to be able to use animations
@@ -25,11 +25,11 @@ This configuration was made over a Debian 12. Since this distro has old package 
 
 ## Configuration
 
-In this configuration I'm using `kitty` terminal, because it have support for ligatures, but `alacritty` it's a good choice too (but without ligatures support).
+In this configuration I'm using `kitty` terminal, because it have support for ligatures, but `alacritty` is a good choice too (but without ligatures support).
 
-Instead of using `dmenu` the default menu search for `i3`, this configuration uses `rofi`.
+Instead of using `dmenu`, the default menu search for `i3`, this configuration uses `rofi`.
 
-Instead of using `i3blocks` or `i3status`, this configuration uses `bumblebee-status`. Some of used plugins might not works, usually because requires some python libs, just open the plugin files and check if you have the libs installed.
+Instead of using `i3blocks` or `i3status`, this configuration uses `bumblebee-status`. Some of used plugins might not works, usually because requires some python lib. To fix it just open the plugin files and check if you have the libs installed.
 
 Move `config` files to your `.config` directory.
 
@@ -171,7 +171,7 @@ PROMPT_COMMAND="_show_last_exit_status; _build_prompt;"
 
 ## Keyboard layout
 
-For some reason, I was having some problems to use deadkeys in the US layout specifically in the terminal.
+For some reason, I was having some problems to use deadkeys with US layout specifically in the terminal.
 
 So if you are not being able to do accents, a workaround that can be made is copy the `XCompose` file to your home directory
 
